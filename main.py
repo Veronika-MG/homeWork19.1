@@ -14,7 +14,7 @@ class MyServer(BaseHTTPRequestHandler):
     """
 
     def __get_html_content(self, filename):
-        with open(filename, 'r') as file:
+        with open(filename, 'r', encoding='utf-8') as file:
             return file.read()
 
     def do_GET(self):
